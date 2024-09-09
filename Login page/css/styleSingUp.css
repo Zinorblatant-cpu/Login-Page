@@ -1,0 +1,297 @@
+:root{
+    --dark-blue: #001845;
+    --lighter-dark-blue: #023E7D;
+    --blue: #0466C8;
+    --white: #ffffff;
+    --gray: #3b3c4145;
+    --black: #000000; 
+    --red: #ff0000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container__input{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    flex-direction: column;  
+}
+
+.container__register, .container__input{
+    padding: 10px;
+}
+
+.container__register{
+    display: flex;
+    flex-direction: row;
+    gap: 100px ;
+}
+
+.button__singUp{
+    color: var(--black);
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier
+    (0.25, 0.8. 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.button__singUp:focus, .button__singUp:hover{
+    color: var(--black);
+}
+
+.button__singUp:focus::after{
+    width: 100%;
+    left: 0%;
+}
+
+.button__singUp:hover::after{
+    width: 100%;
+    left: 0%;
+}
+
+.button__singUp::after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--blue);
+    transition-timing-function: cubic-bezier
+    (0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.button__login{
+    color: var(--black);
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier
+    (0.25, 0.8. 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.button__login:focus, .button__login:hover{
+    color: var(--black);
+}
+
+.button__login:focus::after{
+    width: 100%;
+    left: 0%;
+}
+
+.button__login:hover::after{
+    width: 100%;
+    left: 0%;
+}
+
+.button__login::after{
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--blue);
+    transition-timing-function: cubic-bezier
+    (0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.container__email{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.container__email input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--dark-blue);
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: var(--dark-blue);
+}
+
+.container__email input:focus,
+.container__email input:valid{
+    outline: 0;
+    border-bottom-color: var(--lighter-dark-blue);
+}
+
+.container__email label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.container__email label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: var(--dark-blue);
+    transition: 0.3s cubic-bezier
+    (0.68, -0.55, 0.265, 1.55);
+}
+
+.container__email input:focus+label span,
+.container__email input:valid+label span{
+    color: var(--lighter-dark-blue);
+    transform: translateY(-30px);
+}
+
+.container__password{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.container__password input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--dark-blue);
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: var(--dark-blue);
+}
+
+.container__password input:focus,
+.container__password input:valid{
+    outline: 0;
+    border-bottom-color: var(--lighter-dark-blue);
+}
+
+.container__password label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.container__password label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: var(--dark-blue);
+    transition: 0.3s cubic-bezier
+    (0.68, -0.55, 0.265, 1.55);
+}
+
+.container__password input:focus+label span,
+.container__password input:valid+label span{
+    color: var(--lighter-dark-blue);
+    transform: translateY(-30px);
+}
+
+.container__confirmPassword{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.container__confirmPassword input{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--dark-blue);
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: var(--dark-blue);
+}
+
+.container__confirmPassword input:focus,
+.container__confirmPassword input:valid{
+    outline: 0;
+    border-bottom-color: var(--lighter-dark-blue);
+}
+
+.container__confirmPassword label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.container__confirmPassword label span{
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: var(--dark-blue);
+    transition: 0.3s cubic-bezier
+    (0.68, -0.55, 0.265, 1.55);
+}
+
+.container__confirmPassword input:focus+label span,
+.container__confirmPassword input:valid+label span{
+    color: var(--lighter-dark-blue);
+    transform: translateY(-30px);
+}
+
+.container__confirm{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.bottonConfirm{
+    width: 6em;
+    height: 2em;
+    border-radius: 30em;
+    font-size: 15px;
+    border:none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+.bottonConfirm::before{
+    content: '';
+    width: 0;
+    height: 3em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: 
+    linear-gradient(to right, #0080ff  0%,
+      #02a1f7 100%);
+    transition:  .5s ease;
+    display: block;
+    z-index: -1;
+    color: var(--black);
+}
+
+.bottonConfirm:hover::before{
+    width: 6em;
+}
